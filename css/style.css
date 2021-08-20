@@ -1,0 +1,42 @@
+/* image style */
+
+.mac-image{
+    height: 300px;
+    width: 350px;
+}
+
+/* main section */
+.section-container{
+    margin-left: 120px;
+}
+.button-style{
+    border-radius: 6px;
+}
+.last-btn{
+    margin-left: 4px;
+}
+
+/* price adding section */
+.price-list{
+    height: 20px;
+    width: 300px;
+}
+.best-price{
+    margin-left: 140px;
+}
+#delivery-charge{
+    margin-left: 100px;
+}
+
+/* promo code area */
+#apply-button{
+    margin-left: 3px;
+    border-radius: 5px;
+    background-color: rgb(243, 29, 65);
+    color: wheat;
+}
+
+/* footer area */
+#footer-text{
+    margin-left: 500px;
+}
