@@ -29,7 +29,7 @@
 }
 
 /* promo code area */
-#apply-button{
+.apply-button{
     margin-left: 3px;
     border-radius: 5px;
     background-color: rgb(243, 29, 65);
@@ -37,6 +37,6 @@
 }
 
 /* footer area */
-#footer-text{
+.footer-text{
     margin-left: 500px;
 }

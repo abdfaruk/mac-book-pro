@@ -14,6 +14,7 @@ function updateTotal (){
 }
 
 
+
 // first button (for 8gb memory)
 document.getElementById('8gb-memory').addEventListener('click', function(){
 
@@ -23,6 +24,7 @@ document.getElementById('8gb-memory').addEventListener('click', function(){
     const newTotalMinus = 0;
     memoryPrice2.innerText = newTotalMinus; 
     updateTotal();
+    updateTotalWthDis()
 
 });
 
@@ -36,7 +38,7 @@ document.getElementById('16gb-memory').addEventListener('click', function(){
     const newTotalPlus = 180;
     memoryPriceTotal.innerText = newTotalPlus;
     updateTotal();
-
+    updateTotalWthDis()
 
 });
 
@@ -51,6 +53,7 @@ document.getElementById('1tbssd').addEventListener('click', function(){
     const newSsd1tbTotal = 180;
     ssd1tbPriceTotal.innerText = newSsd1tbTotal;
     updateTotal();
+    updateTotalWthDis()
 
 })
 
@@ -65,6 +68,7 @@ document.getElementById('512gbssd').addEventListener('click', function(){
     const newSsd512Total = 100;
     ssd512mbTotal.innerText = newSsd512Total;
     updateTotal();
+    updateTotalWthDis()
 });
 
 
@@ -77,6 +81,7 @@ document.getElementById('256gbssd').addEventListener('click', function(){
     const newSsd256Total = 0;
     ssd256mbTotal.innerText = newSsd256Total;
     updateTotal();
+    updateTotalWthDis()
 });
 
 
@@ -88,6 +93,7 @@ document.getElementById('deliFast').addEventListener('click', function(){
     const newDeliFastTotal = 20;
     deliFastTotal.innerText = newDeliFastTotal;
     updateTotal();
+    updateTotalWthDis()
 
 });
 
@@ -101,4 +107,31 @@ document.getElementById('deliLate').addEventListener('click', function(){
     const newDeliLateTotal = 0;
     deliLateTotal.innerText = newDeliLateTotal;
     updateTotal();
+    updateTotalWthDis()
+})
+
+
+
+
+// bonus part promo code
+function updateTotalWthDis (){
+    
+    const bestPrice = 1299;
+    const memoryPrice =  parseFloat(document.getElementById('extraMemoryPrice').innerText);
+    const storagePrice = parseFloat(document.getElementById('extraStoragePrice').innerText);
+    const deliveryPrice = parseFloat(document.getElementById('deliveryPrice').innerText);
+
+    document.getElementById('totalPricesWithDic').innerText = bestPrice + memoryPrice + storagePrice + deliveryPrice;
+    
+
+    
+}
+
+
+document.getElementById('applyButton').addEventListener('click', function(){
+    const codeField = document.getElementById('promoCode');
+    const promoCode = codeField.value;
+    if(promoCode == 'stivekaku'){
+        console.log('done');
+    }
 })
