@@ -113,13 +113,7 @@ document.getElementById('deliLate').addEventListener('click', function(){
 })
 
 
-
-
-                                // bonus part promo code
-
-
-
-// function for update last Total including promocode.
+// function for update last Total.
 function updateTotalWthDis (){
     
     const bestPrice = 1299;
@@ -129,6 +123,10 @@ function updateTotalWthDis (){
 
     document.getElementById('totalPricesWithDic').innerText = bestPrice + memoryPrice + storagePrice + deliveryPrice;  
 }
+
+
+                                // bonus part promo code
+
 
 // calculation for promo code and it's use.
 document.getElementById('applyButton').addEventListener('click', function(){
