@@ -1,5 +1,6 @@
+                                    // main part.
 
-
+// function for total price;
 function updateTotal (){
     
     const bestPrice = 1299;
@@ -7,9 +8,10 @@ function updateTotal (){
     const storagePrice = parseFloat(document.getElementById('extraStoragePrice').innerText);
     const deliveryPrice = parseFloat(document.getElementById('deliveryPrice').innerText);
 
-    document.getElementById('total-prices').innerText = bestPrice + memoryPrice + storagePrice + deliveryPrice;
-    
+    let result =  bestPrice + memoryPrice + storagePrice + deliveryPrice;
+    document.getElementById('total-prices').innerText = result;
 
+    return result;
     
 }
 
@@ -44,7 +46,7 @@ document.getElementById('16gb-memory').addEventListener('click', function(){
 
 
 
-// 3rd button for 1 tb ssd extra storage.
+// 3rd button for (1 tb ssd) extra storage.
 
 document.getElementById('1tbssd').addEventListener('click', function(){
     const ssd1tbPriceTotal = document.getElementById('extraStoragePrice');
@@ -59,7 +61,7 @@ document.getElementById('1tbssd').addEventListener('click', function(){
 
 
 
-// 4th button for 512 mb extra storage.
+// 4th button for (512 mb) extra storage.
 
 document.getElementById('512gbssd').addEventListener('click', function(){
     const ssd512mbTotal = document.getElementById('extraStoragePrice');
@@ -72,7 +74,7 @@ document.getElementById('512gbssd').addEventListener('click', function(){
 });
 
 
-// 5th button for 256 gb ssd storage
+// 5th button for (256 gb ssd) storage.
 
 document.getElementById('256gbssd').addEventListener('click', function(){
     const ssd256mbTotal = document.getElementById('extraStoragePrice');
@@ -85,7 +87,7 @@ document.getElementById('256gbssd').addEventListener('click', function(){
 });
 
 
-// 6th button delivery fast
+// 6th button delivery (fast, including charge).
 document.getElementById('deliFast').addEventListener('click', function(){
     const deliFastTotal = document.getElementById('deliveryPrice');
     const preDeliFastText = deliFastTotal.innerText;
@@ -98,7 +100,7 @@ document.getElementById('deliFast').addEventListener('click', function(){
 });
 
 
-// 7th button delivery late
+// 7th button delivery (late, without charge).
 
 document.getElementById('deliLate').addEventListener('click', function(){
     const deliLateTotal = document.getElementById('deliveryPrice');
@@ -113,7 +115,11 @@ document.getElementById('deliLate').addEventListener('click', function(){
 
 
 
-// bonus part promo code
+                                // bonus part promo code
+
+
+
+// function for update last Total including promocode.
 function updateTotalWthDis (){
     
     const bestPrice = 1299;
@@ -121,17 +127,17 @@ function updateTotalWthDis (){
     const storagePrice = parseFloat(document.getElementById('extraStoragePrice').innerText);
     const deliveryPrice = parseFloat(document.getElementById('deliveryPrice').innerText);
 
-    document.getElementById('totalPricesWithDic').innerText = bestPrice + memoryPrice + storagePrice + deliveryPrice;
-    
-
-    
+    document.getElementById('totalPricesWithDic').innerText = bestPrice + memoryPrice + storagePrice + deliveryPrice;  
 }
 
-
+// calculation for promo code and it's use.
 document.getElementById('applyButton').addEventListener('click', function(){
     const codeField = document.getElementById('promoCode');
     const promoCode = codeField.value;
-    if(promoCode == 'stivekaku'){
-        console.log('done');
+    if(promoCode == 'stevekaku'){
+        document.getElementById('totalPricesWithDic').innerText = updateTotal() * 0.8;
+        
     }
-})
+
+    document.getElementById('promoCode').value = '';
+});
